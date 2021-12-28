@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@id/state_1"
+        motion:constraintSetStart="@id/state_0" />
+
+    <ConstraintSet android:id="@+id/state_0">
+        <Constraint
+            android:id="@+id/sample_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="#000" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/state_1">
+        <Constraint
+            android:id="@+id/sample_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="#3D3" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/state_2">
+        <Constraint
+            android:id="@+id/sample_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="#D93" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/state_3">
+        <Constraint
+            android:id="@+id/sample_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="360"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="#B00" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>

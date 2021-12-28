@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="300">
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@id/icon" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/player"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="h,16:9"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/toolbar" />
+        <Constraint
+            android:id="@+id/team_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/player" />
+        <Constraint
+            android:id="@+id/icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="24dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/team_comment">
+            <CustomAttribute
+                motion:attributeName="imageResource"
+                motion:customReference="@drawable/ic_baseline_arrow_circle_up_24" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/player"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="23dp"
+            motion:layout_constraintDimensionRatio="h,16:9"
+            motion:layout_constraintEnd_toEndOf="@id/guideline"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/toolbar" />
+        <Constraint
+            android:id="@+id/team_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/player" />
+        <Constraint
+            android:id="@+id/icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="24dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/player">
+            <CustomAttribute
+                motion:attributeName="imageResource"
+                motion:customReference="@drawable/ic_baseline_arrow_circle_down_24" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>

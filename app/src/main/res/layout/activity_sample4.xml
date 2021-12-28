@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/sample4_motion_scene"
+    tools:context=".Sample4Activity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/toolbar"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_background"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:text="TOOLBAR"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/player_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="-3dp"
+        android:background="#3838ff"
+        android:translationZ="-1dp"
+        app:layout_constraintBottom_toBottomOf="@id/player"
+        app:layout_constraintEnd_toEndOf="@id/player"
+        app:layout_constraintStart_toStartOf="@id/player"
+        app:layout_constraintTop_toTopOf="@id/player" />
+
+    <ImageView
+        android:id="@+id/player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:src="@drawable/ic_baseline_play_arrow_24" />
+
+    <TextView
+        android:id="@+id/team_comment"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffeb37"
+        android:gravity="center"
+        android:minHeight="36dp"
+        android:text="COMMENT" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
